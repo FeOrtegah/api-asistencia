@@ -16,6 +16,7 @@ import jakarta.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 
+//hola
 public class Asistencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
