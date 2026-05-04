@@ -1,4 +1,4 @@
-package main.models;
+package asistencia.asistencias.models;
 import java.time.LocalDate;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
