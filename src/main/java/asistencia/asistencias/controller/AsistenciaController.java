@@ -28,8 +28,8 @@ public class AsistenciaController {
     @GetMapping
     public ResponseEntity<List<AsistenciaDTO>> getAllAsistencias() {
         List<AsistenciaDTO> asistencias = asistenciaService.getAllAsistencias();
-        return asistencias.isEmpty() ? ResponseEntity.noContent().build() : ResponseEntity.ok(asistencias);
-    }
+        return ResponseEntity.ok(asistencias); 
+}
 
     @GetMapping("/{id}")
     public ResponseEntity<AsistenciaDTO> getAsistenciaById(@PathVariable Long id) {
