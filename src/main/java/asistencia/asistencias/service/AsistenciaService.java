@@ -49,7 +49,7 @@ public class AsistenciaService {
 
     public AsistenciaDTO saveAsistencia(AsistenciaDTO dto) {
         Asistencia asistencia = mapToEntity(dto);
-        Asistencia saved = Objects.requireNonNull(asistenciaRepository.save(asistencia), "Error al guardar asistencia");
+        Asistencia saved = Objects.requireNonNull(asistenciaRepository.save(asistencia), "Error al guardar");
         return mapToDTO(saved);
     }
 
@@ -80,8 +80,7 @@ public class AsistenciaService {
         asistencia.setEstudianteId(dto.getEstudianteId());
         asistencia.setObservaciones(dto.getObservaciones());
 
-        Asistencia updated = Objects.requireNonNull(asistenciaRepository.save(asistencia), "Error al actualizar asistencia");
-        return mapToDTO(updated);
+        return mapToDTO(asistenciaRepository.save(asistencia));
     }
 
     public void deleteAsistencia(Long id) {

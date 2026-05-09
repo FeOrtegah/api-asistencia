@@ -53,8 +53,7 @@ public class AsistenciaController {
                 .toUri();
         return ResponseEntity.created(location).body(created);
     }
-
-    // CARGA MASIVA (BULK): Aquí es donde el profesor manda la lista completa
+    
     @PostMapping("/bulk")
     public ResponseEntity<List<AsistenciaDTO>> createBulkAsistencia(@Valid @RequestBody AsistenciaBulkDTO bulkDto) {
         List<AsistenciaDTO> created = asistenciaService.guardarCargaMasiva(bulkDto);
